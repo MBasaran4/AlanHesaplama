@@ -43,15 +43,10 @@ function MainPage() {
       return;
 
     }else if(shape === 'triangle'){
-      if(wid <= 0 || isNaN(wid)){
+      if(wid <= 0 || isNaN(wid) || hei <= 0 || isNaN(hei)){
         setLoading(false);
         setResult('Lütfen geçerli değerler giriniz');
         return;
-      }
-      if(hei <= 0 || isNaN(hei)){
-          setLoading(false);
-          setResult('Lütfen geçerli değerler giriniz');
-          return;
       }
       
       await pause(1000);
